@@ -36,6 +36,9 @@ public func !=(lhs: Country, rhs: Country) -> Bool {
 
 
 @objcMembers public class CountryPickerView: NibView {
+    
+    @objc var selectedPhoneCode: String! = ""
+    
     @IBOutlet weak var spacingConstraint: NSLayoutConstraint!
     @IBOutlet public weak var flagImageView: UIImageView! {
         didSet {
@@ -79,8 +82,8 @@ public func !=(lhs: Country, rhs: Country) -> Bool {
     weak public var delegate: CountryPickerViewDelegate?
     weak public var hostViewController: UIViewController?
     
-    public var _selectedCountry: Country?
-    public var selectedCountry: Country {
+    fileprivate var _selectedCountry: Country?
+    internal(set) public var selectedCountry: Country {
         get {
             return _selectedCountry
                 ?? countries.first(where: { $0.code == Locale.current.regionCode })
@@ -88,6 +91,7 @@ public func !=(lhs: Country, rhs: Country) -> Bool {
         }
         set {
             _selectedCountry = newValue
+            selectedPhoneCode = newValue.phoneCode
             setup()
         }
     }
