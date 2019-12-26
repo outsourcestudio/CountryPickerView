@@ -35,9 +35,9 @@ public func !=(lhs: Country, rhs: Country) -> Bool {
 }
 
 
-@objcMembers public class CountryPickerView: NibView {
+@objc public class CountryPickerView: NibView {
     
-    public var selectedPhoneCode: String! = ""
+    @objc var selectedPhoneCode: String! = ""
     
     @IBOutlet weak var spacingConstraint: NSLayoutConstraint!
     @IBOutlet public weak var flagImageView: UIImageView! {
