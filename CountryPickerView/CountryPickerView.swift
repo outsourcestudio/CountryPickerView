@@ -111,12 +111,14 @@ public func !=(lhs: Country, rhs: Country) -> Bool {
         countryDetailsLabel.font = font
         countryDetailsLabel.textColor = textColor
         if showPhoneCodeInView && showCountryCodeInView {
+            selectedPhoneCode = selectedCountry.phoneCode
             countryDetailsLabel.text = "(\(selectedCountry.code)) \(selectedCountry.phoneCode)"
             return
         }
         
         if showCountryCodeInView || showPhoneCodeInView {
             countryDetailsLabel.text = showCountryCodeInView ? selectedCountry.code : selectedCountry.phoneCode
+            selectedPhoneCode = selectedCountry.phoneCode
         } else {
             countryDetailsLabel.text = nil
         }
