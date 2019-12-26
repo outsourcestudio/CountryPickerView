@@ -79,8 +79,8 @@ public func !=(lhs: Country, rhs: Country) -> Bool {
     weak public var delegate: CountryPickerViewDelegate?
     weak public var hostViewController: UIViewController?
     
-    fileprivate var _selectedCountry: Country?
-    internal(set) public var selectedCountry: Country {
+    public var _selectedCountry: Country?
+    public var selectedCountry: Country {
         get {
             return _selectedCountry
                 ?? countries.first(where: { $0.code == Locale.current.regionCode })
