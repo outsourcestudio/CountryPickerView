@@ -39,6 +39,14 @@ public func !=(lhs: Country, rhs: Country) -> Bool {
     
     @objc public var selectedPhoneCode: String! = ""
     
+    @objc public var objCCountry: String! = ""
+    
+    @objc func setObjCCountry: (NSString )name { // By naming convention, setter for `someValue` should
+                                        // be called `setSomeValue`. This is important!
+//        NSLog("someValue has been assigned a new value: %d", newValue);
+        setCountryByName(name)
+    }
+    
     @IBOutlet weak var spacingConstraint: NSLayoutConstraint!
     @IBOutlet public weak var flagImageView: UIImageView! {
         didSet {
