@@ -139,6 +139,10 @@ public func !=(lhs: Country, rhs: Country) -> Bool {
         }
     }
     
+    @objc func objSetCountryByName(countryName: String) {
+        self.setCountryByName(countryName)
+    }
+    
     public func showCountriesList(from viewController: UIViewController) {
         let countryVc = CountryPickerViewController(style: .grouped)
         countryVc.countryPickerView = self
