@@ -189,33 +189,33 @@ public func !=(lhs: Country, rhs: Country) -> Bool {
 
 //MARK: Helper methods
 extension CountryPickerView {
-    public func setCountryByName(_ name: String) {
+    @objc public func setCountryByName(_ name: String) {
         if let country = countries.first(where: { $0.name == name }){
             selectedCountry = country
         }
     }
     
-    public func setCountryByPhoneCode(_ phoneCode: String) {
+    @objc public func setCountryByPhoneCode(_ phoneCode: String) {
         if let country = countries.first(where: { $0.phoneCode == phoneCode }) {
             selectedCountry = country
         }
     }
     
-    public func setCountryByCode(_ code: String) {
+    @objc public func setCountryByCode(_ code: String) {
         if let country = countries.first(where: { $0.code == code }) {
             selectedCountry = country
         }
     }
     
-    public func getCountryByName(_ name: String) -> Country? {
+    @objc public func getCountryByName(_ name: String) -> Country? {
         return countries.first(where: { $0.name == name })
     }
     
-    public func getCountryByPhoneCode(_ phoneCode: String) -> Country? {
+    @objc public func getCountryByPhoneCode(_ phoneCode: String) -> Country? {
         return countries.first(where: { $0.phoneCode == phoneCode })
     }
     
-    public func getCountryByCode(_ code: String) -> Country? {
+    @objc public func getCountryByCode(_ code: String) -> Country? {
         return countries.first(where: { $0.code == code })
     }
 }
