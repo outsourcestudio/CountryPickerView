@@ -40,7 +40,7 @@ public func !=(lhs: Country, rhs: Country) -> Bool {
     @objc public var selectedPhoneCode: String! = ""
     
 //    @objc public var objCCountry: String! = ""
-//    
+//
 //    @objc func setObjCCountry: (NSString )name { // By naming convention, setter for `someValue` should
 //                                        // be called `setSomeValue`. This is important!
 ////        NSLog("someValue has been assigned a new value: %d", newValue);
@@ -148,7 +148,7 @@ public func !=(lhs: Country, rhs: Country) -> Bool {
     }
     
     @objc public func objSetCountryByName(countryName: String) {
-        self.setCountryByName(countryName)
+        self.setCountryByPhoneCode(countryName)
     }
     
     public func showCountriesList(from viewController: UIViewController) {
