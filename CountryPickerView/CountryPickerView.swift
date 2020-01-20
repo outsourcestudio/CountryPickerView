@@ -139,7 +139,7 @@ public func !=(lhs: Country, rhs: Country) -> Bool {
         }
     }
     
-    @objc func objSetCountryByName(countryName: String) {
+    @objc public func objSetCountryByName(countryName: String) {
         self.setCountryByName(countryName)
     }
     
