@@ -148,7 +148,8 @@ public func !=(lhs: Country, rhs: Country) -> Bool {
     }
     
     @objc public func objSetCountryByName(countryName: String) {
-        self.setCountryByPhoneCode(countryName)
+//        self.setCountryByPhoneCode(countryName)
+        self.setCountryByCode(countryName)
     }
     
     public func showCountriesList(from viewController: UIViewController) {
